@@ -1,378 +1,66 @@
-/* =============================================
-   yuongching.com — Main Stylesheet
-   ============================================= */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Yu Ong Ching</title>
+  <meta name="description" content="Yu Ong Ching — Deputy Special Officer to the Prime Minister of Malaysia, digital strategist, founder of Ubah.TV.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono&display=swap');
+  <nav class="nav">
+    <a href="/" class="nav-logo">Yu Ong <span>Ching</span></a>
+    <div class="nav-links">
+      <a href="/">Analysis</a>
+      <a href="/about.html">About</a>
+      <span class="nav-lang">EN / 中 / BM</span>
+    </div>
+  </nav>
 
-/* --- Reset & Base --- */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <div class="hero">
+    <div class="hero-eyebrow">About</div>
+    <h1 class="hero-headline">Yu Ong Ching<br>游恩清</h1>
+  </div>
 
-:root {
-  --blue:       #185FA5;
-  --blue-light: #E6F1FB;
-  --blue-mid:   #B5D4F4;
-  --gray-100:   #F1EFE8;
-  --gray-400:   #888780;
-  --gray-200:   #B4B2A9;
-  --gray-100b:  #D3D1C7;
-  --red-light:  #FCEBEB;
-  --red:        #A32D2D;
-  --green-light:#EAF3DE;
-  --green:      #3B6D11;
-  --text:       #1a1a1a;
-  --text-muted: #666;
-  --text-faint: #999;
-  --border:     rgba(0,0,0,0.1);
-  --bg:         #f7f6f3;
-  --surface:    #ffffff;
-  --surface-2:  #f0ede8;
-  --radius:     10px;
-}
+  <main class="section">
+    <div class="about-grid">
+      <div class="about-bio">
+        <p>Deputy Special Officer to the Prime Minister of Malaysia. Lead Digital Strategist at DAP Headquarters for over a decade. Founder of Ubah.TV — Malaysia's first live political broadcast platform, launched in 2013 before Facebook supported native live streaming.</p>
+        <p>I write at the intersection of data, political communication, and governance. My analysis draws on first-hand experience designing national narrative strategies for three General Elections (GE13, GE14, GE15), and on quantitative methods from my MPA at Tsinghua University.</p>
+        <p>Currently a PhD candidate at ISSCAD, Peking University, researching agency dynamics in Malaysia's digital public sphere.</p>
+        <p style="margin-top:1.5rem"><a href="mailto:yuongching@gmail.com" class="contact-link">yuongching@gmail.com</a></p>
+      </div>
+      <div class="about-meta">
+        <div class="meta-block">
+          <div class="meta-label">Current roles</div>
+          <div class="meta-val">Deputy Special Officer, PMO Malaysia</div>
+          <div class="meta-val">Lead Digital Strategist, DAP HQ</div>
+        </div>
+        <div class="meta-block">
+          <div class="meta-label">Education</div>
+          <div class="meta-val">MPA · Tsinghua University, 2024</div>
+          <div class="meta-val">BIT · TAR UMT, 2013</div>
+        </div>
+        <div class="meta-block">
+          <div class="meta-label">Research</div>
+          <div class="meta-val">PhD Candidate · ISSCAD, Peking University</div>
+          <div class="meta-val">Digital public sphere · Agency dynamics</div>
+        </div>
+        <div class="meta-block">
+          <div class="meta-label">Founded</div>
+          <div class="meta-val">Ubah.TV (2013)</div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-html { font-size: 16px; scroll-behavior: smooth; }
+  <footer class="footer">
+    <div class="footer-brand">yuongching.com</div>
+    <div class="footer-mono">Political Analysis · Data · Governance · Malaysia</div>
+  </footer>
 
-body {
-  font-family: 'IBM Plex Sans', sans-serif;
-  color: var(--text);
-  background: var(--bg);
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
-
-a { color: inherit; text-decoration: none; }
-
-/* --- Nav --- */
-.nav {
-  background: var(--surface);
-  border-bottom: 0.5px solid var(--border);
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 52px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: -0.3px;
-}
-.nav-logo span { color: var(--blue); }
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-.nav-links a {
-  font-size: 13px;
-  color: var(--text-muted);
-  transition: color 0.15s;
-}
-.nav-links a:hover { color: var(--text); }
-
-.nav-lang {
-  font-size: 11px;
-  font-family: 'IBM Plex Mono', monospace;
-  background: var(--surface-2);
-  border: 0.5px solid var(--border);
-  border-radius: 3px;
-  padding: 2px 8px;
-  color: var(--text-muted);
-}
-
-/* --- Hero --- */
-.hero {
-  background: var(--surface);
-  border-bottom: 0.5px solid var(--border);
-  padding: 2.5rem 2rem 2rem;
-}
-.hero-eyebrow {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  color: var(--blue);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
-}
-.hero-headline {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.5px;
-  color: var(--text);
-}
-
-/* --- Section --- */
-.section {
-  padding: 1.75rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.section-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 1.25rem;
-  border-bottom: 0.5px solid var(--border);
-  padding-bottom: 0.6rem;
-}
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text);
-}
-.section-mono {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  color: var(--blue);
-  letter-spacing: 0.06em;
-}
-
-/* --- Article Cards (homepage) --- */
-.articles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 12px;
-}
-
-.article-card {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.25rem;
-  transition: border-color 0.15s, box-shadow 0.15s;
-}
-.article-card:hover {
-  border-color: rgba(0,0,0,0.2);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-}
-.article-card.featured {
-  border-top: 2px solid var(--blue);
-  grid-column: span 2;
-}
-.article-card a {
-  display: block;
-}
-
-.article-lang {
-  font-size: 10px;
-  font-family: 'IBM Plex Mono', monospace;
-  color: var(--text-faint);
-  letter-spacing: 0.08em;
-  margin-bottom: 6px;
-}
-.article-headline {
-  font-family: 'Playfair Display', serif;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.35;
-  color: var(--text);
-  margin-bottom: 8px;
-}
-.article-headline.large { font-size: 20px; }
-
-.article-summary {
-  font-size: 12px;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-.article-meta {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.article-date {
-  font-size: 11px;
-  font-family: 'IBM Plex Mono', monospace;
-  color: var(--text-faint);
-}
-.article-topic {
-  font-size: 10px;
-  padding: 2px 7px;
-  border-radius: 3px;
-  background: var(--blue-light);
-  color: var(--blue);
-  font-family: 'IBM Plex Mono', monospace;
-}
-
-/* --- Article Page --- */
-.article-page {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 2.5rem 2rem 4rem;
-}
-.article-header {
-  margin-bottom: 2.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 0.5px solid var(--border);
-}
-.article-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
-  margin: 0.5rem 0 1rem;
-}
-.article-byline {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.article-author {
-  font-size: 12px;
-  color: var(--text-muted);
-}
-
-.article-body p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--text);
-  margin-bottom: 1.25rem;
-}
-.article-body p.lead {
-  font-size: 18px;
-  font-weight: 300;
-  color: var(--text-muted);
-  line-height: 1.7;
-  margin-bottom: 2rem;
-}
-.article-body h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 700;
-  margin: 2rem 0 0.75rem;
-}
-
-/* --- Chart Block (inside articles) --- */
-.chart-block {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.25rem 1.5rem;
-  margin: 1.5rem 0;
-}
-.chart-title {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  color: var(--text-muted);
-  margin-bottom: 1rem;
-  letter-spacing: 0.04em;
-}
-.bar-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 9px;
-}
-.bar-name {
-  font-size: 12px;
-  color: var(--text-muted);
-  width: 150px;
-  flex-shrink: 0;
-}
-.bar-track {
-  flex: 1;
-  background: var(--surface-2);
-  border-radius: 2px;
-  height: 7px;
-  overflow: hidden;
-}
-.bar-fill { height: 7px; border-radius: 2px; background: var(--blue); }
-.bar-fill--neutral { background: var(--gray-400); }
-.bar-fill--light   { background: var(--gray-200); }
-.bar-fill--lighter { background: var(--gray-100b); }
-.bar-val {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  color: var(--text-muted);
-  width: 34px;
-  text-align: right;
-  flex-shrink: 0;
-}
-.kw-row { display: flex; gap: 6px; margin-top: 1rem; flex-wrap: wrap; }
-.kw {
-  font-size: 11px;
-  font-family: 'IBM Plex Mono', monospace;
-  padding: 3px 10px;
-  border-radius: 3px;
-}
-.kw--blue  { background: var(--blue-light);  color: var(--blue); }
-.kw--red   { background: var(--red-light);   color: var(--red); }
-.kw--green { background: var(--green-light); color: var(--green); }
-.kw--gray  { background: var(--gray-100);    color: var(--gray-400); }
-
-/* --- About Page --- */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 3rem;
-  align-items: start;
-}
-.about-bio p {
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--text);
-  margin-bottom: 1.1rem;
-}
-.contact-link {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 13px;
-  color: var(--blue);
-  border-bottom: 1px solid var(--blue-mid);
-  padding-bottom: 1px;
-}
-.meta-block { margin-bottom: 1.25rem; }
-.meta-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  color: var(--text-faint);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 4px;
-}
-.meta-val {
-  font-size: 13px;
-  color: var(--text-muted);
-  line-height: 1.7;
-}
-
-/* --- Footer --- */
-.footer {
-  background: var(--surface);
-  border-top: 0.5px solid var(--border);
-  padding: 1.25rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 3rem;
-}
-.footer-brand {
-  font-family: 'Playfair Display', serif;
-  font-size: 14px;
-  color: var(--text);
-}
-.footer-mono {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  color: var(--text-faint);
-}
-
-/* --- Responsive --- */
-@media (max-width: 640px) {
-  .hero-headline { font-size: 26px; }
-  .article-card.featured { grid-column: span 1; }
-  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .nav { padding: 0 1rem; }
-  .section, .article-page { padding-left: 1rem; padding-right: 1rem; }
-}
+</body>
+</html>
