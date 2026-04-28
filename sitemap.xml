@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yu Ong Ching — Political Data Analysis</title>
+  <meta name="description" content="Reading Malaysia's politics through data. Analysis by Yu Ong Ching, Deputy Special Officer to the Prime Minister.">
+  <meta name="author" content="Yu Ong Ching">
+  <meta property="og:title" content="Yu Ong Ching — Political Data Analysis">
+  <meta property="og:description" content="Reading Malaysia's politics through data.">
+  <meta property="og:url" content="https://yuongching.com">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://yuongching.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Google Analytics: replace G-XXXXXXXXXX with your tracking ID -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">Yu Ong <span>Ching</span></a>
+    <div class="nav-links">
+      <a href="/">Analysis</a>
+      <a href="/about.html">About</a>
+      <span class="nav-lang">EN / 中 / BM</span>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-eyebrow">Political Data Analysis · Malaysia</div>
+    <h1 class="hero-headline">Reading Malaysia's politics<br>through data.</h1>
+  </div>
+
+  <main class="section">
+    <div class="section-header">
+      <div class="section-title">Latest Analysis</div>
+      <div class="section-mono" id="latest-date"></div>
+    </div>
+
+    <!-- ARTICLES LIST: copy and paste a new .article-card block to add more articles -->
+    <div class="articles-grid" id="articles">
+
+      <!-- ARTICLE 1: Featured -->
+      <article class="article-card featured">
+        <a href="articles/umno-ns-mb-sentiment.html">
+          <div class="article-lang">EN · DATA ANALYSIS</div>
+          <h2 class="article-headline large">UMNO Negeri Sembilan's MB Gambit: What 3,000 Comments Tell Us</h2>
+          <p class="article-summary">Sentiment analysis of public reaction to UMNO NS withdrawing support for the PKR Menteri Besar — and what the data signals ahead of PRU16.</p>
+          <div class="article-meta">
+            <span class="article-date">28 Apr 2026</span>
+            <span class="article-topic">UMNO · N9</span>
+          </div>
+        </a>
+      </article>
+      <!-- END ARTICLE 1 -->
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">yuongching.com</div>
+    <div class="footer-mono">Political Analysis · Data · Governance · Malaysia</div>
+  </footer>
+
+  <script>
+    const d = new Date();
+    document.getElementById('latest-date').textContent =
+      d.toLocaleString('en-GB',{month:'short',year:'numeric'}).toUpperCase();
+  </script>
+</body>
+</html>
