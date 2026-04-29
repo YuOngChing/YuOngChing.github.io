@@ -5,9 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yu Ong Ching — Political Data Analysis</title>
   <meta name="description" content="Reading Malaysia's politics through data. Analysis by Yu Ong Ching, Deputy Special Officer to the Prime Minister.">
+  <meta name="author" content="Yu Ong Ching">
+  <meta property="og:title" content="Yu Ong Ching — Political Data Analysis">
+  <meta property="og:description" content="Reading Malaysia's politics through data.">
+  <meta property="og:url" content="https://yuongching.com">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://yuongching.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GPP16Y9M3F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GPP16Y9M3F');
+</script>
 </head>
 <body>
 
@@ -31,5 +45,60 @@
       <div class="section-mono" id="latest-date"></div>
     </div>
 
-    <div class="articles-grid">
+    <!-- ARTICLES LIST: copy and paste a new .article-card block to add more articles -->
+    <div class="articles-grid" id="articles">
+
+      <!-- ARTICLE 1: Featured English -->
       <article class="article-card featured">
+        <a href="articles/umno-ns-mb-sentiment.html">
+          <div class="article-lang">EN · DATA ANALYSIS</div>
+          <h2 class="article-headline large">UMNO Negeri Sembilan Crisis: What 2,223 Comments Tell Us</h2>
+          <p class="article-summary">Sentiment analysis of public reaction to UMNO NS withdrawing support for the PKR Menteri Besar — and why the public narrative formed before any party issued a statement.</p>
+          <div class="article-meta">
+            <span class="article-date">28 Apr 2026</span>
+            <span class="article-topic">UMNO · N9</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- ARTICLE 1: Chinese -->
+      <article class="article-card">
+        <a href="articles/umno-ns-mb-sentiment-zh.html">
+          <div class="article-lang">中文 · 数据分析</div>
+          <h2 class="article-headline">森美兰UMNO危机：2223条评论说明了什么</h2>
+          <p class="article-summary">民间叙事早于政党声明形成——数据告诉我们的比政治人物承认的更多。</p>
+          <div class="article-meta">
+            <span class="article-date">28 Apr 2026</span>
+            <span class="article-topic">UMNO · 森美兰</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- ARTICLE 1: BM -->
+      <article class="article-card">
+        <a href="articles/umno-ns-mb-sentiment-bm.html">
+          <div class="article-lang">BM · ANALISIS DATA</div>
+          <h2 class="article-headline">Krisis UMNO Negeri Sembilan: Apa Yang 2,223 Komen Beritahu Kita</h2>
+          <p class="article-summary">Naratif awam telah terbentuk sebelum mana-mana parti mengeluarkan kenyataan rasmi.</p>
+          <div class="article-meta">
+            <span class="article-date">28 Apr 2026</span>
+            <span class="article-topic">UMNO · N9</span>
+          </div>
+        </a>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">yuongching.com</div>
+    <div class="footer-mono">Political Analysis · Data · Governance · Malaysia</div>
+  </footer>
+
+  <script>
+    const d = new Date();
+    document.getElementById('latest-date').textContent =
+      d.toLocaleString('en-GB',{month:'short',year:'numeric'}).toUpperCase();
+  </script>
+</body>
+</html>
