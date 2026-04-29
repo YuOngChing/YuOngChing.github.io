@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>森美兰UMNO危机：2223条评论说明了什么 — 游恩清</title>
+  <meta name="description" content="通过分析2223条脸书评论，数据显示民间叙事早于政党声明形成。">
+  <meta property="og:title" content="森美兰UMNO危机：2223条评论说明了什么">
+  <meta property="og:description" content="公众已经作出裁决——在任何政党发表声明之前。">
+  <meta property="og:url" content="https://yuongching.com/articles/umno-ns-mb-sentiment-zh.html">
+  <link rel="canonical" href="https://yuongching.com/articles/umno-ns-mb-sentiment-zh.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .lang-switch{display:flex;gap:8px;margin-bottom:2rem}
+    .lang-btn{font-size:11px;font-family:'IBM Plex Mono',monospace;padding:4px 12px;border-radius:3px;border:0.5px solid var(--border);background:var(--surface-2);color:var(--text-muted);text-decoration:none;transition:all 0.15s}
+    .lang-btn.active{background:#185FA5;color:#fff;border-color:#185FA5}
+    .lang-btn:hover{border-color:#185FA5;color:#185FA5}
+    .finding-box{background:#F5F0FF;border-left:3px solid #4A1A7A;border-radius:0 8px 8px 0;padding:1.25rem 1.5rem;margin:1.5rem 0}
+    .finding-box p{margin:0;font-size:15px;line-height:1.8;color:#2D1066}
+    .finding-box strong{color:#4A1A7A}
+    .party-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:1.5rem 0}
+    .party-card{border-radius:8px;padding:1rem;border:0.5px solid var(--border);background:var(--surface)}
+    .party-card.umno{border-top:2px solid #CC0001}
+    .party-card.ph{border-top:2px solid #E74C3C}
+    .party-card.dap{border-top:2px solid #C8102E}
+    .party-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;color:var(--text-faint);margin-bottom:6px}
+    .party-verdict strong{color:var(--text);display:block;margin-bottom:4px;font-size:14px}
+    .party-verdict{font-size:13px;color:var(--text-muted);line-height:1.6}
+    .download-box{background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .download-info strong{display:block;color:var(--text);font-size:15px;margin-bottom:3px}
+    .download-info{font-size:13px;color:var(--text-muted)}
+    .download-btn{font-size:12px;font-family:'IBM Plex Mono',monospace;padding:8px 16px;border-radius:5px;background:#185FA5;color:#fff;text-decoration:none;white-space:nowrap;flex-shrink:0}
+    @media(max-width:640px){.party-grid{grid-template-columns:1fr}.download-box{flex-direction:column}}
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GPP16Y9M3F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GPP16Y9M3F');
+</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">Yu Ong <span>Ching</span></a>
+    <div class="nav-links">
+      <a href="/">Analysis</a>
+      <a href="/about.html">About</a>
+      <span class="nav-lang">EN / 中 / BM</span>
+    </div>
+  </nav>
+
+  <main class="article-page">
+    <div class="article-header">
+      <div class="article-lang">中文 · 数据分析</div>
+      <h1 class="article-title">森美兰UMNO危机：<br>2223条评论说明了什么</h1>
+      <div class="article-byline">
+        <span class="article-date">2026年4月28日</span>
+        <span class="article-topic">UMNO · 森美兰</span>
+        <span class="article-author">游恩清</span>
+      </div>
+    </div>
+
+    <div class="article-body">
+
+      <div class="lang-switch">
+        <a href="umno-ns-mb-sentiment.html" class="lang-btn">English</a>
+        <a href="umno-ns-mb-sentiment-zh.html" class="lang-btn active">中文</a>
+        <a href="umno-ns-mb-sentiment-bm.html" class="lang-btn">Bahasa Malaysia</a>
+      </div>
+
+      <p class="lead">当森美兰UMNO宣布撤回对PKR州务大臣的支持时，政界在争论合法性问题。但民众早已作出裁决——通过2223条脸书评论。而且，这一切发生在任何政党发表正式声明之前。</p>
+
+      <h2>数据来源</h2>
+      <p>本分析基于从UMNO森美兰两个公开脸书帖子中采集的2223条评论，结合1319名独立评论者的个人资料数据——占评论者总人数的64.6%，采用随机抽样方式。评论者按好友数量分为三个层级，以此作为影响力与真实性的参考指标。</p>
+
+      <div class="chart-block">
+        <div class="chart-title">评论者档案 — 好友数量层级（n = 1,711，有数据者）</div>
+        <div class="bar-row">
+          <div class="bar-name">高影响力（&gt;1,000人）</div>
+          <div class="bar-track"><div class="bar-fill" style="width:42.4%"></div></div>
+          <div class="bar-val">42.4%</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name">低触及（&lt;500人）</div>
+          <div class="bar-track"><div class="bar-fill bar-fill--neutral" style="width:37.8%"></div></div>
+          <div class="bar-val">37.8%</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name">普通用户（500–1,000人）</div>
+          <div class="bar-track"><div class="bar-fill bar-fill--light" style="width:19.9%"></div></div>
+          <div class="bar-val">19.9%</div>
+        </div>
+      </div>
+
+      <div class="chart-block">
+        <div class="chart-title">情绪分析 — 关键词分类（n = 2,223条评论）</div>
+        <div class="bar-row">
+          <div class="bar-name">批评UMNO森美兰</div>
+          <div class="bar-track"><div class="bar-fill" style="width:72%"></div></div>
+          <div class="bar-val">28.3%+</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name">聚焦王室／习俗法</div>
+          <div class="bar-track"><div class="bar-fill bar-fill--neutral" style="width:40%"></div></div>
+          <div class="bar-val">15.9%</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name">支持UMNO森美兰</div>
+          <div class="bar-track"><div class="bar-fill bar-fill--light" style="width:4%"></div></div>
+          <div class="bar-val">1.3%</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name">批评希盟／PKR州务大臣</div>
+          <div class="bar-track"><div class="bar-fill bar-fill--lighter" style="width:2%"></div></div>
+          <div class="bar-val">0.7%</div>
+        </div>
+        <div class="kw-row">
+          <span class="kw kw--red">tamak 贪婪 (761)</span>
+          <span class="kw kw--red">gila kuasa 权力欲 (258)</span>
+          <span class="kw kw--red">pengkhianat 叛徒 (117)</span>
+          <span class="kw kw--red">tebuk atap 背刺 (104)</span>
+          <span class="kw kw--gray">adat 习俗法 (163)</span>
+          <span class="kw kw--gray">tuanku 王室 (85)</span>
+        </div>
+      </div>
+
+      <h2>数字背后的含义</h2>
+
+      <p><strong>批评情绪是真实的，不是水军驱动的。</strong> 42.4%的评论者拥有超过1000名脸书好友——这些是在现实社会中拥有真实人脉网络的用户。数据中未发现任何协调性虚假行为：92.3%的用户只发表了一条评论，没有任何用户发表超过五条评论。这是真实的民间愤怒。</p>
+
+      <p><strong>"贪权"叙事已经完全固化。</strong> <em>tamak</em>（贪婪）、<em>gila kuasa</em>（权力欲）、<em>tebuk atap</em>（背刺）和<em>pengkhianat</em>（叛徒）这几个词在2223条评论中合计出现超过1200次。UMNO的官方解释——撤支持是对州务大臣处理习俗危机失当的原则性回应——并未渗透进民间认知。公众已经决定了这件事的本质。</p>
+
+      <p><strong>希盟的反叙事几乎缺席。</strong>只有0.7%的评论直接为PKR州务大臣辩护。这个空白被对UMNO的批评填满了，但并没有对希盟施政的正面肯定——这是一个被错过的传播机会。</p>
+
+      <h2>三党声明与叙事博弈</h2>
+      <p>2026年4月27至28日，三个主要政党相继发表正式声明。将这些声明与评论数据对照分析，揭示了一个重要事实：各党并非在主导叙事，而是在回应一个公众已经建构完成的叙事。</p>
+
+      <div class="party-grid">
+        <div class="party-card umno">
+          <div class="party-label">UMNO BN 森美兰 · 4月28日</div>
+          <div class="party-verdict">
+            <strong>防御性重新定框</strong>
+            以否认"tebuk atap"（背刺）开篇——恰恰证明这个词已经在民间牢牢扎根。无法回答核心问题：两年后的今天，为什么是现在？
+          </div>
+        </div>
+        <div class="party-card ph">
+          <div class="party-label">希盟 — Fahmi Fadzil · 4月28日</div>
+          <div class="party-verdict">
+            <strong>简短且防御</strong>
+            谴责UMNO的行动，但没有提供新的叙事框架，也没有回应习俗宪制层面的争议。
+          </div>
+        </div>
+        <div class="party-card dap">
+          <div class="party-label">行动党 — 陆兆福 · 4月27日</div>
+          <div class="party-verdict">
+            <strong>最完整的反叙事</strong>
+            用UMNO自己的宪制和习俗语言来削弱UMNO的立场——先建立习俗可信度，再宣示对阿敏努丁的支持。
+          </div>
+        </div>
+      </div>
+
+      <div class="finding-box">
+        <p><strong>核心发现：</strong>主导性的民间叙事——"贪权"、"背刺"、"叛徒"——早在任何政党正式回应之前，已经在评论区自发形成。当UMNO发表否认"tebuk atap"的声明时，这个词已经在公共话语中出现了逾100次。在马来西亚当前的数字公共领域，公民正在设定叙事战场。政治精英被迫在一片他们没有选择的地形上作战。</p>
+      </div>
+
+      <h2>接下来会怎样</h2>
+      <p>批评情绪的有机性质——由高影响力用户驱动，未发现协调性虚假活动——意味着这不是一场会快速平息的网络风波。"贪权"框架之所以具有黏性，是因为它契合了公众对UMNO早于此次危机就已存在的长期认知。面对PRU16，UMNO森美兰面临的挑战是：如何在一个已经将这一事件定性为自私自利的公众面前重建公信力。根据数据，这项工作尚未开始。</p>
+
+      <div class="download-box">
+        <div class="download-info">
+          <strong>完整研究报告</strong>
+          包含研究方法、用户层级分析、地理分布、关键词频率及三党声明分析，共7个章节、20+数据点。发邮件索取完整报告。
+        </div>
+        <a href="mailto:hi@yuongching.com?subject=申请：UMNO森美兰情绪分析完整报告&body=您好，我想申请获取森美兰UMNO危机情绪分析完整研究报告。" class="download-btn">↓ 申请报告</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">yuongching.com</div>
+    <div class="footer-mono">Political Analysis · Data · Governance · Malaysia</div>
+  </footer>
+
+</body>
+</html>
