@@ -14,14 +14,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GPP16Y9M3F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GPP16Y9M3F');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPP16Y9M3F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GPP16Y9M3F');
+  </script>
+  <style>
+    .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1rem}
+    .filter-btn{font-size:11px;font-family:'IBM Plex Mono',monospace;padding:5px 14px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);color:var(--text-muted);cursor:pointer;transition:all 0.15s;white-space:nowrap}
+    .filter-btn:hover{border-color:#185FA5;color:#185FA5}
+    .filter-btn.active{background:#185FA5;color:#fff;border-color:#185FA5}
+    .articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+    .article-card{background:var(--surface);border:0.5px solid var(--border);border-radius:var(--radius);padding:1.25rem;transition:border-color 0.15s,box-shadow 0.15s}
+    .article-card:hover{border-color:rgba(0,0,0,0.2);box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+    .article-card.featured{border-top:2px solid #185FA5;grid-column:span 2}
+    .article-card a{display:block;text-decoration:none;color:inherit}
+    .article-lang{font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--text-faint);letter-spacing:0.08em;margin-bottom:6px}
+    .article-headline{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;line-height:1.35;color:var(--text);margin-bottom:8px}
+    .article-headline.large{font-size:19px}
+    .article-summary{font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:10px}
+    .article-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .article-date{font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--text-faint)}
+    .article-topic{font-size:10px;padding:2px 7px;border-radius:3px;background:#E6F1FB;color:#185FA5;font-family:'IBM Plex Mono',monospace}
+    .no-results{grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-muted);font-size:14px}
+    .results-count{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-faint)}
+    @media(max-width:640px){.article-card.featured{grid-column:span 1}}
+  </style>
 </head>
 <body>
 
@@ -42,52 +63,26 @@
   <main class="section">
     <div class="section-header">
       <div class="section-title">Latest Analysis</div>
-      <div class="section-mono" id="latest-date"></div>
+      <div class="results-count" id="results-count"></div>
     </div>
 
-    <!-- ARTICLES LIST: copy and paste a new .article-card block to add more articles -->
-    <div class="articles-grid" id="articles">
-
-      <!-- ARTICLE 1: Featured English -->
-      <article class="article-card featured">
-        <a href="articles/umno-ns-mb-sentiment.html">
-          <div class="article-lang">EN · DATA ANALYSIS</div>
-          <h2 class="article-headline large">UMNO Negeri Sembilan Crisis: What 2,223 Comments Tell Us</h2>
-          <p class="article-summary">Sentiment analysis of public reaction to UMNO NS withdrawing support for the PKR Menteri Besar — and why the public narrative formed before any party issued a statement.</p>
-          <div class="article-meta">
-            <span class="article-date">28 Apr 2026</span>
-            <span class="article-topic">UMNO · N9</span>
-          </div>
-        </a>
-      </article>
-
-      <!-- ARTICLE 1: Chinese -->
-      <article class="article-card">
-        <a href="articles/umno-ns-mb-sentiment-zh.html">
-          <div class="article-lang">中文 · 数据分析</div>
-          <h2 class="article-headline">森美兰UMNO危机：2223条评论说明了什么</h2>
-          <p class="article-summary">民间叙事早于政党声明形成——数据告诉我们的比政治人物承认的更多。</p>
-          <div class="article-meta">
-            <span class="article-date">28 Apr 2026</span>
-            <span class="article-topic">UMNO · 森美兰</span>
-          </div>
-        </a>
-      </article>
-
-      <!-- ARTICLE 1: BM -->
-      <article class="article-card">
-        <a href="articles/umno-ns-mb-sentiment-bm.html">
-          <div class="article-lang">BM · ANALISIS DATA</div>
-          <h2 class="article-headline">Krisis UMNO Negeri Sembilan: Apa Yang 2,223 Komen Beritahu Kita</h2>
-          <p class="article-summary">Naratif awam telah terbentuk sebelum mana-mana parti mengeluarkan kenyataan rasmi.</p>
-          <div class="article-meta">
-            <span class="article-date">28 Apr 2026</span>
-            <span class="article-topic">UMNO · N9</span>
-          </div>
-        </a>
-      </article>
-
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Sentiment Analysis">Sentiment Analysis</button>
+      <button class="filter-btn" data-filter="Electoral Politics">Electoral Politics</button>
+      <button class="filter-btn" data-filter="Party Watch">Party Watch</button>
+      <button class="filter-btn" data-filter="Governance">Governance</button>
+      <button class="filter-btn" data-filter="PRU16">PRU16</button>
     </div>
+
+    <div class="filter-bar" id="lang-bar" style="margin-top:-0.5rem">
+      <button class="filter-btn active" data-lang="all">All Languages</button>
+      <button class="filter-btn" data-lang="EN">English</button>
+      <button class="filter-btn" data-lang="中文">中文</button>
+      <button class="filter-btn" data-lang="BM">Bahasa Malaysia</button>
+    </div>
+
+    <div class="articles-grid" id="articles-grid"></div>
   </main>
 
   <footer class="footer">
@@ -95,10 +90,65 @@
     <div class="footer-mono">Political Analysis · Data · Governance · Malaysia</div>
   </footer>
 
+  <script src="articles.js"></script>
   <script>
-    const d = new Date();
-    document.getElementById('latest-date').textContent =
-      d.toLocaleString('en-GB',{month:'short',year:'numeric'}).toUpperCase();
+    let activeCategory = 'all';
+    let activeLang = 'all';
+
+    function renderArticles() {
+      const grid = document.getElementById('articles-grid');
+      const countEl = document.getElementById('results-count');
+
+      let filtered = articles.filter(a => {
+        const catMatch = activeCategory === 'all' || a.category === activeCategory;
+        const langMatch = activeLang === 'all' || a.lang === activeLang;
+        return catMatch && langMatch;
+      });
+
+      filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+      countEl.textContent = filtered.length + ' article' + (filtered.length !== 1 ? 's' : '');
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '<div class="no-results">No articles found for this filter.</div>';
+        return;
+      }
+
+      grid.innerHTML = filtered.map(a => {
+        const isFeatured = a.featured && activeCategory === 'all' && activeLang === 'all';
+        return `
+          <article class="article-card ${isFeatured ? 'featured' : ''}">
+            <a href="${a.url}">
+              <div class="article-lang">${a.lang} · ${a.category.toUpperCase()}</div>
+              <h2 class="article-headline ${isFeatured ? 'large' : ''}">${a.title}</h2>
+              <p class="article-summary">${a.summary}</p>
+              <div class="article-meta">
+                <span class="article-date">${a.dateDisplay}</span>
+                <span class="article-topic">${a.topic}</span>
+              </div>
+            </a>
+          </article>
+        `;
+      }).join('');
+    }
+
+    document.getElementById('filter-bar').addEventListener('click', e => {
+      if (!e.target.matches('.filter-btn')) return;
+      document.querySelectorAll('#filter-bar .filter-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      activeCategory = e.target.dataset.filter;
+      renderArticles();
+    });
+
+    document.getElementById('lang-bar').addEventListener('click', e => {
+      if (!e.target.matches('.filter-btn')) return;
+      document.querySelectorAll('#lang-bar .filter-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      activeLang = e.target.dataset.lang;
+      renderArticles();
+    });
+
+    renderArticles();
   </script>
+
 </body>
 </html>
